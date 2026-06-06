@@ -2,12 +2,22 @@
 
 main()
 {
-	int i,n;
+	int i,y,o,p;
 	char m,l;
 	
 	printf("\n\n                                                         libary\n\n");
 	
 	
+	printf("\nenter day : ");
+	scanf("%d",&y);
+	printf("\nenter month in digits : ");
+	scanf("%d",&o);
+	printf("\nenter year in digits : ");
+	scanf("%d",&p);
+	
+	if(y<=31&&0<=y&&o<=12&&0<=o&&p<=2050&&2010<=p)
+	{
+	printf("\n\ntoday's date : %d|%d|%d",y,o,p);	
 	printf("\npress 1 for issue book .");
 	printf("\npress 2 for return book.");
 	printf("\npress 3 for check availablity.");
@@ -121,11 +131,18 @@ main()
 				break;
 				
 					case 'T':
-				printf("\n\nISSUED MAN'S SEARCH FOR MEANING  by VIKTOR E. FRANKL");
+				printf("\n\nISSUED MAN'S SEARCH FOR MEANING  by VIKTOR E. FRANKL\n");
 				break;
-				
-				
-		}																			
-	}
+	 }
+	}		
   }
-
+  else
+		{
+			printf("\n\ninvalide date . ");
+	    }
+		
+			if(y+7<32)
+				{
+					printf("\n\nshould be returened on : %d|%d|%d| day",(int)y+7,o,p);
+				}
+}
